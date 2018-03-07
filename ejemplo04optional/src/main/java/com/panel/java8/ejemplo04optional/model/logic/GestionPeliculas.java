@@ -4,7 +4,7 @@ import java.util.Optional;
 
 import com.panel.java8.ejemplo04optional.model.entity.Pelicula;
 
-public class GestionPelicullas {
+public class GestionPeliculas {
 	public Pelicula buscar(Integer id) {
 		switch (id) {
 		case 1:
