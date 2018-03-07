@@ -3,7 +3,9 @@ package com.panel.java8.ejemplo02InterfacesFuncionales;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Consumer;
+import java.util.function.Function;
 import java.util.function.Predicate;
+import java.util.function.Supplier;
 
 @FunctionalInterface
 interface VerPartido {
@@ -66,10 +68,13 @@ public class App {
 		System.out.println("valor: "+filtro.test("fistror"));
 		System.out.println("valor: "+filtro.test("Fistro pecador de la pradera de la muerte mala"));
 		
+		// function<tipo1,tipo2>: tipo2 apply(tipo1)
+		Function<String,String> funcionDeTransformacion = (txt)->txt.toUpperCase();
+		System.out.println(funcionDeTransformacion.apply("va siendo hora ya no"));
 		
-		
-		
-		
+		// supplier T get()
+		Supplier<Double> supplier = Math::random;
+		System.out.println(supplier.get());
 		
 	}
 	public static void algo(List lista) {
