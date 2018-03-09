@@ -52,7 +52,10 @@ public class App {
 		// ZoneDateTime
 		ZoneId zonaMadrid = ZoneId.of("Europe/Madrid");
 		ZoneId zonaCanarias = ZoneId.of("Atlantic/Canary");
+		LocalDateTime now2 = LocalDateTime.now();
+		//now2.get
 		ZonedDateTime zdtMadrid = ZonedDateTime.of(LocalDateTime.now(), zonaMadrid);
+		ZoneId zone = zdtMadrid.getZone();
 		ZonedDateTime zdtCanarias = zdtMadrid.withZoneSameInstant(zonaCanarias);
 		System.out.println("Madrid :"+zdtMadrid.toLocalTime());
 		System.out.println("Canarias : "+zdtCanarias.toLocalTime());
