@@ -6,6 +6,8 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import javax.swing.plaf.basic.BasicInternalFrameTitlePane.CloseAction;
@@ -88,6 +90,9 @@ public class App
         			(s1,s2)->{
         				return s1.getTotal().intValue() - s2.getTotal().intValue();
         			});
+        List<Empresario> empresarios = sobres.stream()
+        		.map(s -> s.getEmpresario()).
+        			collect(Collectors.toList());
         
         System.out.println("El max" + elDeMayorValor.get());
         

@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Ejemplo08bundle
+Bundle-SymbolicName: ejemplo08bundle
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: com.curso.osgi.ejemplo08bundle.Activator
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Import-Package: org.osgi.framework;version="1.3.0"
+Bundle-ActivationPolicy: lazy
